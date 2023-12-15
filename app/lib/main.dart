@@ -1,7 +1,12 @@
 import 'package:app/features/home/views/home_page.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+late CameraDescription firstCamera;
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final cameras = await availableCameras();
+  firstCamera = cameras.first;
   runApp(const SeeFood());
 }
 

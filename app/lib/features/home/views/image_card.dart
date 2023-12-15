@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:app/features/home/model/image_model.dart';
 import 'package:flutter/material.dart';
 
@@ -11,15 +13,20 @@ class ImageCard extends StatelessWidget {
       children: [
         SizedBox(
           height: 300,
+          width: img.fromAssets ? null : 300,
           child: Card(
               elevation: 10,
               color: Colors.white,
-              child: Image.asset(img.imagePath, fit: BoxFit.cover)),
+              child: img.fromAssets
+                  ? Image.asset(img.imagePath, fit: BoxFit.cover)
+                  : Image.file(File(img.imagePath))),
         ),
         const SizedBox(height: 10),
         Text(
           img.foodName,
-          style: const TextStyle(fontSize: 15),
+          style: TextStyle(
+              fontSize: img.fromAssets ? 15 : 18,
+              fontWeight: img.fromAssets ? FontWeight.normal : FontWeight.bold),
         )
       ],
     );

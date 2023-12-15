@@ -1,13 +1,13 @@
 import 'package:app/features/home/model/image_model.dart';
 
 final foodImages = [
-  ImageModel("chatamari"),
-  ImageModel("choila"),
-  ImageModel("dalbhaat"),
-  ImageModel("dhido"),
-  ImageModel("gundruk"),
-  ImageModel("kheer"),
-  ImageModel("momo"),
-  ImageModel("sekuwa"),
-  ImageModel("selroti")
+  ImageModel(foodName: "chatamari"),
+  ImageModel(foodName: "choila"),
+  ImageModel(foodName: "dalbhaat"),
+  ImageModel(foodName: "dhido"),
+  ImageModel(foodName: "gundruk"),
+  ImageModel(foodName: "kheer"),
+  ImageModel(foodName: "momo"),
+  ImageModel(foodName: "sekuwa"),
+  ImageModel(foodName: "selroti")
 ];

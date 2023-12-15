@@ -1,3 +1,4 @@
+import 'package:app/features/camera/views/camera_page.dart';
 import 'package:app/features/home/views/food_caraousel.dart';
 import 'package:flutter/material.dart';
 
@@ -7,16 +8,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(width: 40),
-            FloatingActionButton(
-              child: const Icon(Icons.camera, size: 45),
-              onPressed: () {},
-            ),
-          ],
-        ),
         appBar: AppBar(
           toolbarHeight: 127,
           title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -56,6 +47,19 @@ class HomePage extends StatelessWidget {
                 )
               ],
             )
+          ],
+        ),
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(width: 40),
+            FloatingActionButton(
+              child: const Icon(Icons.camera_alt, size: 45),
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CameraPage()));
+              },
+            ),
           ],
         ));
   }

@@ -1,13 +1,14 @@
 class ImageModel {
-  late String foodName;
-  late String imagePath;
+  String foodName;
+  String imagePath;
+  bool fromAssets;
 
-  ImageModel(String foodName) {
-    this.foodName = capitalize(foodName);
-    this.imagePath = "assets/foods/" + foodName + ".jpeg";
-  }
+  ImageModel({required String foodName, String? imagePath})
+      : this.foodName = capitalize(foodName),
+        this.imagePath = imagePath ?? "assets/foods/$foodName.jpeg",
+        this.fromAssets = imagePath == null;
 
-  String capitalize(String str) {
+  static String capitalize(String str) {
     if (str.isEmpty) {
       return str;
     }
