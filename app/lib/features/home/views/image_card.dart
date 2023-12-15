@@ -19,7 +19,10 @@ class ImageCard extends StatelessWidget {
               color: Colors.white,
               child: img.fromAssets
                   ? Image.asset(img.imagePath, fit: BoxFit.cover)
-                  : Image.file(File(img.imagePath))),
+                  : Image.file(
+                      File(img.imagePath),
+                      fit: BoxFit.cover,
+                    )),
         ),
         const SizedBox(height: 10),
         Text(
