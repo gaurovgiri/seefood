@@ -16,7 +16,7 @@ class RecognizedPage extends StatelessWidget {
           toolbarHeight: 127,
           title: Row(children: [
             const SizedBox(
-              width: 70,
+              width: 60,
             ),
             Image.asset(
               "assets/logo.png",
