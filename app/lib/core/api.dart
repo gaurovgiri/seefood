@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 class FoodAPIRequest {
   static Future<String> postFoodRecognitionRequest(String imagePath) async {
-    const url = "http://192.168.1.11:8000/recognize/";
+    const url = "http://192.168.1.2:8000/recognize/";
     final dio = Dio();
 
     FormData formData = FormData.fromMap({
