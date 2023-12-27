@@ -1,6 +1,9 @@
 # SeeFood
 Welcome to SeeFood, a computer vision-based application designed to recognize Nepali foods and provide detail informations such as allergens.
 
+## Demo:
+
+<img src="seefood_demo.gif" width=200 height=450>
 
 ## Directories
 
